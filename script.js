@@ -352,26 +352,30 @@ setTimeout(addImage, 1000);
 }
 
 
-const displaytime=()=>{
+const displaytime = () => {
     const time = document.querySelector('#time');
     const date = new Date();
     const hours = date.getHours();
     const minutes = date.getMinutes().toString().padStart(2, '0');
     time.textContent = `${hours}:${minutes}`;
-    const noon = document.querySelectorAll  ('#noon');
-    if (hours >= 12 && hours < 18) {
-        noon.forEach((noon) => {
-            noon.textContent = 'Shaam';
+    const noon = document.querySelectorAll('#noon');
+    
+    // 12:00 AM - 11:59 AM: Subha
+    if (hours >= 0 && hours < 12) {
+        noon.forEach((el) => {
+            el.textContent = 'Subha';
+        });
+    } 
+    // 12:00 PM - 6:59 PM: Shaam
+    else if (hours >= 12 && hours < 19) {
+        noon.forEach((el) => {
+            el.textContent = 'Shaam';
         });
     }
-    if (hours >= 18 && hours < 24) {
-        noon.forEach((noon) => {
-            noon.textContent = 'Raat';
-        });
-    }
-    if (hours < 12 || hours >= 18) {
-        noon.forEach((noon) => {
-            noon.textContent = 'Subha';
+    // 7:00 PM - 11:59 PM: Raat
+    else {
+        noon.forEach((el) => {
+            el.textContent = 'Raat';
         });
     }
 }
