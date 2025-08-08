@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #3e2723, #ffffff, #000000);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 1rem;
+}
+
+#login {
+  width: min(90vw, 600px);
+  background: #e0dcd7;
+  border-radius: 1.5rem;
+  padding: clamp(1rem, 5vw, 2rem) clamp(1.5rem, 6vw, 3rem);
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+#login h1 {
+  font-family: 'Freckle Face', cursive;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  color: #3e2723;
+  margin-bottom: clamp(0.8rem, 4vw, 1.5rem);
+}
+
+.radios {
+  margin-bottom: clamp(1rem, 4vw, 2rem);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.radios input[type="radio"] {
+  display: none;
+}
+
+.radios label {
+  background: #d7ccc8;
+  padding: clamp(0.4rem, 2vw, 0.6rem) clamp(0.8rem, 3vw, 1.2rem);
+  border-radius: 1.5625rem;
+  font-weight: bold;
+  color: #3e2723;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+}
+
+.radios input[type="radio"]:checked + label {
+  background-color: #3e2723;
+  color: #fff;
+}
+
+.naming p {
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  color: #333;
+  margin: 0.3rem 0;
+}
+
+.naming input[type="text"] {
+  margin-top: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(0.6rem, 2.5vw, 0.8rem) 1rem;
+  border: 2px solid #3e2723;
+  border-radius: 0.9375rem;
+  width: 100%;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  background-color: #fff;
+  color: #000;
+}
+
+.naming button {
+  margin-top: clamp(1rem, 3vw, 1.5rem);
+  padding: clamp(0.6rem, 2.5vw, 0.8rem) clamp(1.5rem, 4vw, 2rem);
+  background-color: #3e2723;
+  color: white;
+  border: none;
+  border-radius: 1.5625rem;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.naming button:hover {
+  background-color: #000;
+  transform: scale(1.05);
+}
+
+/* Welcome Section */
+#Welcome {
+  background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+  border-radius: 1.5rem;
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  text-align: center;
+  width: min(90vw, 600px);
+  box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 1s ease;
+  font-family: 'Freckle Face', cursive;
+}
+
+#Welcome h1 {
+  color: #3e2723;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  margin-bottom: clamp(0.3rem, 2vw, 0.5rem);
+}
+
+#Welcome p {
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  color: #444;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Final Birthday Message Page */
+#page {
+  background: linear-gradient(to bottom right, #e5e5e5, #d7ccc8);
+  border-radius: 1.5rem;
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  text-align: center;
+  width: min(95vw, 600px);
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 1s ease;
+  font-family: 'Freckle Face', cursive;
+  position: relative;
+  overflow: hidden;
+}
+
+#page .text-content h1 {
+  color: #3e2723;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  margin-bottom: clamp(0.3rem, 2vw, 0.5rem);
+}
+
+#page .text-content h3 {
+  color: #000;
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+  margin-bottom: clamp(0.5rem, 2.5vw, 1rem);
+}
+
+#page .text-content p {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: clamp(0.5rem, 2.5vw, 1rem) 0;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  padding: 0 clamp(0.5rem, 5vw, 2rem);
+}
+
+#image-container {
+  margin: clamp(1rem, 4vw, 2rem) auto;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+#image-container img {
+  width: min(20vw, 120px);
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  touch-action: none;
+}
+
+.cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(120px, 40vw), 1fr));
+  gap: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 2vw, 1rem);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cont img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cont img:hover {
+  transform: scale(1.05);
+}
+
+/* Audio Button */
+#audioo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  border: none;
+  background: transparent;
+  color: #2c2a2a;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  cursor: pointer;
+}
+
+#next {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  border: none;
+  background: transparent;
+  color: #2c2a2a;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #login, #Welcome, #page {
+      padding: clamp(1rem, 4vw, 1.5rem);
+      width: 95vw;
+  }
+
+  .radios {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .radios label {
+      width: 80%;
+      text-align: center;
+  }
+
+  #image-container {
+      gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+
+  .cont {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 0.75rem;
+  }
+
+  #image-container img {
+      width: min(25vw, 100px);
+  }
+}
+
+@media (max-width: 480px) {
+  .cont {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 0.5rem;
+  }
+
+  #login h1, #Welcome h1 {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .naming input[type="text"], .naming button {
+      font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  #image-container {
+      margin: 0.5rem auto;
+  }
+
+  #image-container img {
+      width: min(30vw, 80px);
+  }
+
+  .cont img {
+      border-radius: 0.5rem;
+  }
+}

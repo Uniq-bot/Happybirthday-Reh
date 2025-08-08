@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="login">
+      <h1>🎉 Is this Your Birthday, lady? 🎈</h1>
+      <form>
+        <div class="radios">
+          <input type="radio" name="birthday" value="yes" id="yes" required />
+          <label for="yes">Yes</label>
+          <input type="radio" name="birthday" value="no" id="no" required />
+          <label for="no">No</label>
+        </div>
+        <div
+          class="naming"
+          style="display: none; opacity: 0; transition: all 0.5s ease"
+        >
+          <p>Enter your name to verify</p>
+          <p>if you are the one, then you will see the surprise</p>
+          <p>Otherwise, you will be redirected to the home page</p>
+          <p>So, enter your name</p>
+          <p>and let's see if you are the one</p>
+          <input
+            type="text"
+            name="username"
+            placeholder="Who are you ?????"
+            id="name"
+            required
+          />
+          <button id="verify" type="submit">verify</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="redirecting" id="Welcome" style="display: none">
+      <h1>Hey, Bhagwaan!!</h1>
+      <p>Welcome to the mini surprise I tried to create for you duh!!!</p>
+    </div>
+
+    <div id="page" style="display: none">
+      <button id="audioo" style="position: absolute; top: 10px; right: 10px; z-index: 1000; border: none; background: transparent; color: rgb(44, 42, 42); font-size: 2em;"><i class="ri-play-circle-line"></i></button>
+      <div class="text-content">
+        <h1 style="display: flex; flex-direction: column">
+          Happy Birthday <span id="change" style="height: 10vh"></span>
+        </h1>
+        <h3>Let's make the day special</h3>
+        <p id="text" style="transition: all 0.5s ease-in-out" style="padding: 0 30em;">
+          Pata hai… abhi ek mahina bhi nahi hua properly baat kare hue, Lekin tu
+          aisi ban gayi hai jiske saamne main sach mein apna asli wala version
+          dikha sakta hoon. Na koi acting, na koi filter. Bas main. Tu samajhti
+          hai mujhe bina bole… aur waise feel karwati hai jaise Bhagwaan ne khud
+          bheja ho tujhe mere life mein. Tu sirf special nahi hai, tu bahut
+          zyada special hai. Aaj tera birthday hai… so yeah, officially "teri
+          smile legal hone ka din" 😄 Tera har din khushiyon se bhara ho, aur tu
+          hamesha aise hi pyaari, pagal, aur thodi si meri bani rahe. 😜 Bas ek
+          wish hai, Agla birthday… shayad mere saath mano. Saath mein cake,
+          saath mein vibe, aur saath mein main aur tu. 💫 Enjoy kar aaj,
+          Bhagwaan. Tu deserve karti hai saari khushiyan.
+        </p>
+        <div class="cont"></div>
+        <div
+          class="list-of-things"
+          style="font-family: 'Freckle Face', cursive; display: none"
+        >
+          <p>Out of ideas lol!!!! haha. But, my final words:</p>
+          <p>Happy Birthday</p>
+          <p>
+            Never let any one ruin the smile in your face. And remember your
+            manushya is here for you always. SO, dont worry rehh!! Swo jaa aab.
+            <span id="noon"></span> key kitne baje hey dekh
+            <span id="time"></span> <span id="noon"></span> key
+            <span id="time"></span> baaj raheh.
+          </p>
+        </div>
+        <button onclick="next()" style="position: absolute; bottom: 10px; right: 10px; z-index: 1000; border: none; background: transparent; color: rgb(44, 42, 42); font-size: 2em;" id="next">Next</button>
+      </div>
+    </div>
+
+    <div
+      id="image-container"
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 2em;
+        position: absolute;
+      "
+    ></div>
+    <audio id="birthdayAudio" src="hello.mp3"></audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
