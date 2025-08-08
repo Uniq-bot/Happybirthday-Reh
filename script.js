@@ -125,7 +125,14 @@ function triggerWelcomeSequence() {
 }
 
 // ===== IMAGES =====
-const images = ['i1.png', 'i2.png', 'i3.png', 'i4.png', 'i5.png', 'i6.png'];
+const images = [
+  'assets/i1.png', 
+  'assets/i2.png', 
+  'assets/i3.png', 
+  'assets/i4.png', 
+  'assets/i5.png', 
+  'assets/i6.png'
+];
 
 // ===== CREATE ANIMATED IMAGES (NEW LOGIC) =====
 function createAnimatedImages() {
@@ -267,7 +274,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const next = () => {
   const text = document.querySelector('#text');
-  const images = ['i1.png', 'i2.png', 'i3.png', 'i4.png', 'i5.png', 'i6.png'];
+  const images = [
+    'assets/i1.png', 
+    'assets/i2.png', 
+    'assets/i3.png', 
+    'assets/i4.png', 
+    'assets/i5.png', 
+    'assets/i6.png'
+  ];
   const cont = document.querySelector('.cont');
 const audioo=document.getElementById('audioo');
 audioo.style.display='none';
