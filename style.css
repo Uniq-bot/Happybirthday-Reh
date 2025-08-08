@@ -119,6 +119,49 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Yes/No Buttons */
+#yesss, #nooo {
+  padding: 0.8rem 2rem;
+  margin: 1rem 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-family: 'Freckle Face', cursive;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+}
+
+#yesss {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#nooo {
+  background-color: #f44336;
+  color: white;
+}
+
+#yesss:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+#nooo:hover {
+  background-color: #e53935;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.3);
+}
+
+#yesss:active, #nooo:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Final Birthday Message Page */
 #page {
   background: linear-gradient(to bottom right, #e5e5e5, #d7ccc8);
@@ -187,7 +230,12 @@ body {
   max-width: 100%;
   box-sizing: border-box;
 }
-
+.play:after{
+  content: 'click me';
+  color: #2c2a2a;
+  font-size: 1em;
+  cursor: pointer;
+}
 .cont img {
   width: 100%;
   height: auto;

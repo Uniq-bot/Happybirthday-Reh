@@ -18,6 +18,8 @@ function init() {
     hideElement(naming);
     hideElement(welcome);
     hideElement(finalMessage);
+   
+    
 }
 
 // ===== HANDLERS =====
@@ -42,6 +44,8 @@ function handleVerifyClick(e) {
         showParishaMessage();
     } else if (name === "bhagwaan") {
         triggerWelcomeSequence();
+        const audioo0 = document.getElementById('birthdayAudio2');
+        audioo0.play();
     } else {
         form.innerHTML = `<h1 style="color: crimson;">❌ Get lost imposter 😡</h1>`;
     }
@@ -396,6 +400,8 @@ const stopAudio = () => {
 
 const audioo = document.getElementById('audioo');
 audioo.addEventListener('click', () => {
+    const audioo0 = document.getElementById('birthdayAudio2');
+    audioo0.pause();
     if(audioo.classList.contains('play')) {
         playAudio();
         audioo.classList.remove('play');
@@ -404,5 +410,84 @@ audioo.addEventListener('click', () => {
         stopAudio();
         audioo.classList.remove('pause');
         audioo.classList.add('play');
+        audioo0.play()  
     }
+});
+
+
+
+const yesss = document.getElementById('yesss');
+const nooo = document.getElementById('nooo');
+yesss.addEventListener('click', () => {
+  // Pause the existing birthday audio
+  const birthdayAudio = document.getElementById('birthdayAudio2');
+  if (birthdayAudio && !birthdayAudio.paused) {
+    birthdayAudio.pause();
+  }
+
+  // Array of shayari audio file names
+  const sayari = [
+    'sayari1.mp3',
+    'sayari2.mp3',
+    'sayari3.mp3',
+  ];
+let i=0;
+  // Remove previously added audio (if any)
+  const existingSayari = document.getElementById('sayaris');
+  if (existingSayari) {
+    existingSayari.remove();
+  }
+
+  // Create a new audio element
+  const audio = document.createElement('audio');
+  audio.id = 'sayaris';
+  audio.src = `assets/${sayari[0]}`;
+  audio.autoplay = true;
+  audio.style.display = 'none';
+  audio.controls = false;
+  document.body.appendChild(audio);
+  
+  yesss.textContent = 'prev';
+  nooo.textContent = 'next';
+  
+  // Store the current playing audio reference
+  let currentAudio = null;
+  
+  // Function to stop all audio and play new one
+  function playSayari(index) {
+    // Stop any currently playing audio
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+    
+    // Update index and check bounds
+    i = Math.max(0, Math.min(index, sayari.length - 1));
+    
+    // Play the new audio
+    audio.src = `assets/${sayari[i]}`;
+    audio.load(); // Force reload the audio
+    audio.play().catch(e => console.error('Audio play failed:', e));
+    currentAudio = audio;
+    
+    console.log('Playing sayari:', i, sayari[i]);
+  }
+  
+  // Next button (nooo is next)
+  nooo.addEventListener('click', () => {
+    if (i < sayari.length - 1) {
+      playSayari(i + 1);
+    } else {
+      console.log('Reached the end of sayari list');
+    }
+  });
+  
+  // Previous button (yesss is prev)
+  yesss.addEventListener('click', () => {
+    if (i > 0) {
+      playSayari(i - 1);
+    } else {
+      console.log('Already at the first sayari');
+    }
+  });
 });
