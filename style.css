@@ -230,12 +230,7 @@ body {
   max-width: 100%;
   box-sizing: border-box;
 }
-.play:after{
-  content: 'click me';
-  color: #2c2a2a;
-  font-size: 1em;
-  cursor: pointer;
-}
+
 .cont img {
   width: 100%;
   height: auto;
@@ -331,4 +326,5 @@ body {
   .cont img {
       border-radius: 0.5rem;
   }
+ 
 }
