@@ -147,6 +147,7 @@ function createAnimatedImages() {
         const img = document.createElement('img');
         img.src = src;
         img.alt = src;
+        img.loading = 'lazy';
         img.style.width = '120px';
         img.style.height = '120px';
         img.style.objectFit = 'cover';
