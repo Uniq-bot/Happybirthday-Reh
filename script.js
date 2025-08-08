@@ -126,12 +126,12 @@ function triggerWelcomeSequence() {
 
 // ===== IMAGES =====
 const images = [
-  'assets/i1.png', 
-  'assets/i2.png', 
-  'assets/i3.png', 
-  'assets/i4.png', 
-  'assets/i5.png', 
-  'assets/i6.png'
+  'assets/i1.webp', 
+  'assets/i2.webp', 
+  'assets/i3.webp', 
+  'assets/i4.webp', 
+  'assets/i5.webp', 
+  'assets/i6.webp'
 ];
 
 // ===== CREATE ANIMATED IMAGES (NEW LOGIC) =====
@@ -276,12 +276,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const next = () => {
   const text = document.querySelector('#text');
   const images = [
-    'assets/i1.png', 
-    'assets/i2.png', 
-    'assets/i3.png', 
-    'assets/i4.png', 
-    'assets/i5.png', 
-    'assets/i6.png'
+    'assets/i1.webp', 
+    'assets/i2.webp', 
+    'assets/i3.webp', 
+    'assets/i4.webp', 
+    'assets/i5.webp', 
+    'assets/i6.webp'
   ];
   const cont = document.querySelector('.cont');
 const audioo=document.getElementById('audioo');
